@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AI Diagram Architect</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        darkMode: 'class',
+        theme: {
+          extend: {
+            colors: {
+              slate: {
+                925: '#0a0f1a', // Custom darker slate for editor bg
+              }
+            }
+          }
+        }
+      }
+    </script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+    <style>
+      /* CSS Variables for Dynamic Themes */
+      :root {
+        --dot-color: #cbd5e1; /* slate-300 */
+      }
+      .dark {
+        --dot-color: #334155; /* slate-700 */
+      }
+      
+      /* Minimal resets for full height app */
+      html, body, #root {
+        height: 100%;
+        margin: 0;
+        overflow: hidden;
+        /* Default base colors handled by Tailwind classes on body in App */
+      }
+      
+      /* Dot Grid Pattern for Canvas */
+      .bg-dot-grid {
+        background-size: 20px 20px;
+        background-image: radial-gradient(circle, var(--dot-color) 1px, transparent 1px);
+      }
+      
+      /* Custom Scrollbar */
+      .scrollbar-thin::-webkit-scrollbar {
+        width: 6px;
+        height: 6px;
+      }
+      .scrollbar-thin::-webkit-scrollbar-track {
+        background: transparent;
+      }
+      .scrollbar-thin::-webkit-scrollbar-thumb {
+        background: #94a3b8; /* slate-400 */
+        border-radius: 3px;
+      }
+      .dark .scrollbar-thin::-webkit-scrollbar-thumb {
+        background: #334155; /* slate-700 */
+      }
+      .scrollbar-thin::-webkit-scrollbar-thumb:hover {
+        background: #64748b; /* slate-500 */
+      }
+      .dark .scrollbar-thin::-webkit-scrollbar-thumb:hover {
+        background: #475569; /* slate-600 */
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react/": "https://aistudiocdn.com/react@^19.2.0/",
+    "react": "https://aistudiocdn.com/react@^19.2.0",
+    "@google/genai": "https://aistudiocdn.com/@google/genai@^1.30.0",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
+    "clsx": "https://aistudiocdn.com/clsx@^2.1.1",
+    "lucide-react": "https://aistudiocdn.com/lucide-react@^0.555.0",
+    "mermaid": "https://aistudiocdn.com/mermaid@^11.12.1",
+    "@excalidraw/excalidraw": "https://aistudiocdn.com/@excalidraw/excalidraw@^0.18.0",
+    "mermaid-to-excalidraw": "https://esm.sh/@mermaid-to-excalidraw/mermaid-to-excalidraw@1.2.1?external=mermaid"
+  }
+}
+</script>
+</head>
+  <body>
+    <div id="root"></div>
+  </body>
+</html>

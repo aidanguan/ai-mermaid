@@ -1,0 +1,5 @@
+{
+  "name": "AI Diagram Architect",
+  "description": "Generate, edit, and collaborate on Mermaid flowcharts and Excalidraw whiteboards using Gemini AI.",
+  "requestFramePermissions": []
+}
